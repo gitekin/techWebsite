@@ -1,0 +1,26 @@
+/* Reset some default browser styles */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+  background-color: rgba(0, 0, 0, 0.447);
+  font-family: Arial, sans-serif;
+}
+
+/* Style a heading element */
+h1 {
+  color: #000000eb;
+}
+
+/* Style a paragraph element */
+p {
+  color: #cda643;
+  margin: 10px 0;
+}
+
+/* Add more CSS rules as needed */
