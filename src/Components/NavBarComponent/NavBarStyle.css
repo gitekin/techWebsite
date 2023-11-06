@@ -1,0 +1,60 @@
+/* Styles to make the Navbar stick to the top */
+.NavBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* ensure it stays on top of other content */
+    background-color: #333;
+    height: 60px;
+    /* Increased height for a bigger photo or logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Adjust the ul and li for the increased navbar height */
+.NavBar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    /* center align the list items vertically */
+    height: 10%;
+    /* make it the full height of the navbar */
+}
+
+.NavBar li {
+    margin: 0 25px;
+    /* adjust margins to center items */
+}
+
+/* Style for a bigger logo/photo */
+.NavBar .logo {
+    width: 100px;
+    /* or whatever size you desire */
+    height: auto;
+    /* keep aspect ratio */
+    margin-right: 1000px;
+    /* optional spacing to separate logo from the menu items */
+}
+
+.NavBar a {
+    color: rgb(169, 169, 169);
+    text-decoration: none;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.NavBar a:hover {
+    background-color: rgba(208, 163, 163, 0.1);
+}
+
+/* Adjust the main content padding */
+body {
+    padding-top: 10px;
+    /* Adjust based on the height of your navbar */
+}

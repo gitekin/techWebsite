@@ -1,0 +1,193 @@
+/* Styles for iPhone */
+.myPhoto-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.myPhoto-overlay-text {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.myPhoto-product-link {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, 25px);
+    color: #0e75e2;
+    text-decoration: none;
+}
+
+.myPhoto-product-link:hover {
+    text-decoration: underline;
+}
+
+.myPhoto-product-container {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Styles for Samsung */
+.mySamsung-image {
+    display: block;
+    width: 165%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
+    transform: translate(-45px, 1px);
+    margin: 0;
+}
+
+.mySamsung-overlay-text {
+    position: absolute;
+    top: 77%;
+    left: 28%;
+    transform: translate(-50%, -10%);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.mySamsung-product-link {
+    position: absolute;
+    top: 82%;
+    left: 27%;
+    transform: translate(-50%, 25px);
+    color: #0e75e2;
+    text-decoration: none;
+}
+
+.mySamsung-product-link:hover {
+    text-decoration: underline;
+}
+
+.mySamsung-product-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Styles for Huawei */
+.Huaweip60pro-image {
+    display: block;
+    width: 149%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    transform: translate(259px, 1px);
+}
+
+.Huaweip60pro-text-container {
+    position: relative;
+    /* you can specify a width if necessary, or any other styles */
+    width: 300px;
+    height: 50px;
+}
+
+.Huaweip60pro-overlay-text {
+    position: absolute;
+    top: 3%;
+    left: 80%;
+    transform: translate(370px, 25px);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.Huaweip60pro-product-link {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    transform: translate(400px, 60px);
+    color: #0e75e2;
+    text-decoration: none;
+}
+
+.Huaweip60pro-product-link:hover {
+    text-decoration: underline;
+}
+
+.Huaweip60pro-container {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Additional styles to make Samsung and Huawei side by side */
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: px;
+}
+
+.mySamsung-container,
+.Huaweip60pro-container {
+    flex: 1;
+}
+
+.Googelpixel8pro-image {
+    display: block;
+    width: 130%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
+    transform: translate(-155%, 500px);
+    margin: 0;
+}
+
+.Googelpixel8pro-overlay-text {
+    position: absolute;
+    top: 150%;
+    left: 28%;
+    transform: translate(-145%, -100%);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.Googelpixel8pro-product-link {
+    position: absolute;
+    top: 160%;
+    left: 27%;
+    transform: translate(-370%, -270%);
+    color: #0e75e2;
+    text-decoration: none;
+}
+
+.Googelpixel8pro-product-link:hover {
+    text-decoration: underline;
+}
+
+.Googelpixel8pro-product-container {
+    position: relative;
+    margin-bottom: 30px;
+}
