@@ -1,0 +1,197 @@
+.apple-page {
+    text-align: center;
+    height: 2000vh;
+    /* set the height to see the scroll effect */
+}
+
+.logo-container {
+    position: fixed;
+    /* Make it stay in place while scrolling */
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.8s ease;
+
+}
+
+.apple-logo {
+    width: 450px;
+    /* Adjust the size as needed */
+    height: auto;
+    opacity: 0.45;
+
+}
+
+.transparent-logo {
+    opacity: 0.1;
+}
+
+.iphone15pro-container {
+    padding: 150px 0;
+}
+
+.iphone15pro-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.iphone15pro-overlay-text {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transform: translate(-50%, 10%);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(22, 21, 21, 0.793);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.details-button {
+    margin-top: 10px;
+    /* Space above the button */
+    padding: 8px 16px;
+    /* Padding inside the button */
+    font-size: 16px;
+    /* Button text size */
+    cursor: pointer;
+    /* Cursor to indicate it's clickable */
+    /* Add more styles as needed for your button */
+}
+
+.iphone15pro-description {
+    margin-top: 15px;
+    /* Space above the description */
+    text-align: left;
+    /* Align text to the left */
+    width: 80%;
+    /* Description width */
+    margin-left: auto;
+    /* Center the description */
+    margin-right: auto;
+    /* Center the description */
+    /* Add more styles as needed for your description */
+}
+
+.iphone15pro-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iphone15pro-description-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align children to the start of the container */
+}
+
+.iphone15 .iphone15promax-details-container {
+    /* There might be a typo in your class name. If this is meant to be nested under .iphone15, use a space before the dot. Otherwise, remove the space. */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.iphone15pro-picture {
+    max-width: 40px;
+    height: auto;
+    margin-right: 20px;
+    /* Add right margin to create space between the image and the description */
+}
+
+.iphone15promax-container {
+    padding: 20px 4;
+    margin-top: 40px;
+}
+
+.iphone15promax-image {
+    width: 150%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.9;
+    margin-top: -10px;
+
+
+}
+
+.iphone15promax-overlay-text {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transform: translate(-50%, 10%);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(22, 21, 21, 0.793);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.iphone15promax-description {
+    margin-top: 15px;
+    /* Space above the description */
+    text-align: left;
+    /* Align text to the left */
+    width: 80%;
+    /* Description width */
+    margin-left: auto;
+    /* Center the description */
+    margin-right: auto;
+    /* Center the description */
+    /* Add more styles as needed for your description */
+}
+
+.iphone15-container {
+    padding: 20px 4;
+    margin-top: -40px;
+}
+
+.iphone15-image {
+    width: 60%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.9;
+    margin-top: -10px;
+
+
+}
+
+.iphone15-overlay-text {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transform: translate(-50%, 10%);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(22, 21, 21, 0.793);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.iphone15-description {
+    margin-top: 15px;
+    /* Space above the description */
+    text-align: left;
+    /* Align text to the left */
+    width: 80%;
+    /* Description width */
+    margin-left: auto;
+    /* Center the description */
+    margin-right: auto;
+    /* Center the description */
+    /* Add more styles as needed for your description */
+}

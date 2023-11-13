@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import NavBar from './Components/NavBarComponent/NavBar.jsx';
 import Home from './Pages/Home';
 import Brand from './Pages/Brand';
+import Apple from './Brands/Apple';
+
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/home" element={<Home />} />
                     <Route path="/brands" element={<Brand />} />
+                    <Route path="/brands/apple" element={<Apple />} />
 
                     <Route path="*" element={<Navigate to="/home" />} />
                 </Routes>

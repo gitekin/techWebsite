@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './BrandStyle.css';
 
 const Brand = () => {
-    const brands = ["Apple", "Samsung", "Huawei", "Google", "LG", "Vivo", "Motorola ", "BlackBerry", "Nokia","Sony"];
+    const brands = ["Apple", "Samsung", "Huawei", "Google", "LG", "Vivo", "Motorola ", "BlackBerry", "Nokia", "Sony"];
 
     const slugify = (text) => {
         return text.toString().toLowerCase()
