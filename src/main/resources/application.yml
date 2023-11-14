@@ -1,0 +1,18 @@
+spring:
+  mail:
+    host: smtp.example.com
+    port: 587
+    username: myemail@example.com
+    password: mypassword
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+
+    data:
+      mongodb:
+        uri: mongodb://localhost:27017/techWebsiteDb
