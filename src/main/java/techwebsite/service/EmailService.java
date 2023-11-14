@@ -3,7 +3,8 @@ package techwebsite.service;
 import javax.mail.*;
 import javax.mail.internet.*;
 
-public class EmailService {
+public clas
+         EmailService {
 
     public void sendEmail(String to, String subject, String content) {
         // Set SMTP server properties
