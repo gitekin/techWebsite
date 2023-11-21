@@ -1,44 +1,53 @@
 .apple-page {
     text-align: center;
-    height: 2000vh;
-    /* set the height to see the scroll effect */
+    min-height: 100vh;
+    background-color: #00000000;
 }
 
 .logo-container {
     position: fixed;
-    /* Make it stay in place while scrolling */
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: opacity 0.8s ease;
-
 }
 
 .apple-logo {
-    width: 450px;
-    /* Adjust the size as needed */
+    width: 300px;
     height: auto;
-    opacity: 0.45;
-
 }
 
-.transparent-logo {
-    opacity: 0.1;
+/* Common styles for all iPhones */
+.iphone-container {
+    padding: 40px 0;
 }
 
-.iphone15pro-container {
-    padding: 150px 0;
-}
-
-.iphone15pro-image {
+.iphone-image {
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     height: auto;
     margin: 0 auto;
     opacity: 0.9;
 }
 
-.iphone15pro-overlay-text {
+.iphone15pro-image {
+    max-width: 400px;
+    margin-top: 80px;
+}
+
+.iphone15promax-image {
+    max-width: 600px;
+    margin-top: 80px;
+
+}
+
+.iphone15-image {
+    max-width: 400px;
+    margin-top: 80px;
+
+}
+
+.overlay-text {
     position: absolute;
     top: 15%;
     left: 10%;
@@ -55,143 +64,53 @@
 
 .details-button {
     margin-top: 10px;
-    /* Space above the button */
     padding: 8px 16px;
-    /* Padding inside the button */
     font-size: 16px;
-    /* Button text size */
     cursor: pointer;
-    /* Cursor to indicate it's clickable */
-    /* Add more styles as needed for your button */
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.iphone15pro-description {
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+.iphone-description {
     margin-top: 15px;
-    /* Space above the description */
     text-align: left;
-    /* Align text to the left */
     width: 80%;
-    /* Description width */
     margin-left: auto;
-    /* Center the description */
     margin-right: auto;
-    /* Center the description */
-    /* Add more styles as needed for your description */
+    font-size: 14px;
 }
 
-.iphone15pro-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+@media (max-width: 768px) {
+    .apple-logo {
+        width: 200px;
+    }
+
+    .iphone-image {
+        max-width: 300px;
+    }
+
+    .iphone-description {
+        width: 95%;
+        font-size: 12px;
+    }
 }
 
-.iphone15pro-description-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* Align children to the start of the container */
+/* Accessibility Improvements */
+.apple-logo,
+.iphone-image,
+.details-button {
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.iphone15 .iphone15promax-details-container {
-    /* There might be a typo in your class name. If this is meant to be nested under .iphone15, use a space before the dot. Otherwise, remove the space. */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.iphone15pro-picture {
-    max-width: 40px;
-    height: auto;
-    margin-right: 20px;
-    /* Add right margin to create space between the image and the description */
-}
-
-.iphone15promax-container {
-    padding: 20px 4;
-    margin-top: 40px;
-}
-
-.iphone15promax-image {
-    width: 150%;
-    max-width: 800px;
-    height: auto;
-    margin: 0 auto;
-    opacity: 0.9;
-    margin-top: -10px;
-
-
-}
-
-.iphone15promax-overlay-text {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    transform: translate(-50%, 10%);
-    color: rgba(255, 255, 255, 0.767);
-    font-size: 20px;
-    font-weight: bold;
-    background-color: rgba(22, 21, 21, 0.793);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
-    pointer-events: none;
-}
-
-.iphone15promax-description {
-    margin-top: 15px;
-    /* Space above the description */
-    text-align: left;
-    /* Align text to the left */
-    width: 80%;
-    /* Description width */
-    margin-left: auto;
-    /* Center the description */
-    margin-right: auto;
-    /* Center the description */
-    /* Add more styles as needed for your description */
-}
-
-.iphone15-container {
-    padding: 20px 4;
-    margin-top: -40px;
-}
-
-.iphone15-image {
-    width: 60%;
-    max-width: 900px;
-    height: auto;
-    margin: 0 auto;
-    opacity: 0.9;
-    margin-top: -10px;
-
-
-}
-
-.iphone15-overlay-text {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    transform: translate(-50%, 10%);
-    color: rgba(255, 255, 255, 0.767);
-    font-size: 20px;
-    font-weight: bold;
-    background-color: rgba(22, 21, 21, 0.793);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
-    pointer-events: none;
-}
-
-.iphone15-description {
-    margin-top: 15px;
-    /* Space above the description */
-    text-align: left;
-    /* Align text to the left */
-    width: 80%;
-    /* Description width */
-    margin-left: auto;
-    /* Center the description */
-    margin-right: auto;
-    /* Center the description */
-    /* Add more styles as needed for your description */
+.details-button:focus {
+    outline: 2px solid #80858a;
 }

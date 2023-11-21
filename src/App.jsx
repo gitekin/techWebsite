@@ -7,6 +7,7 @@ import Apple from './Brands/Apple';
 
 
 
+
 function App() {
     return (
         <Router>
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/home" element={<Home />} />
                     <Route path="/brands" element={<Brand />} />
                     <Route path="/brands/apple" element={<Apple />} />
+
 
                     <Route path="*" element={<Navigate to="/home" />} />
                 </Routes>
