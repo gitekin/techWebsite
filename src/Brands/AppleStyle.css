@@ -17,7 +17,6 @@
     height: auto;
 }
 
-/* Common styles for all iPhones */
 .iphone-container {
     padding: 40px 0;
 }
@@ -38,28 +37,11 @@
 .iphone15promax-image {
     max-width: 600px;
     margin-top: 80px;
-
 }
 
 .iphone15-image {
     max-width: 400px;
     margin-top: 80px;
-
-}
-
-.overlay-text {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    transform: translate(-50%, 10%);
-    color: rgba(255, 255, 255, 0.767);
-    font-size: 20px;
-    font-weight: bold;
-    background-color: rgba(22, 21, 21, 0.793);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
-    pointer-events: none;
 }
 
 .details-button {
@@ -87,7 +69,6 @@
     font-size: 14px;
 }
 
-
 @media (max-width: 768px) {
     .apple-logo {
         width: 200px;
@@ -103,78 +84,33 @@
     }
 }
 
-/* Accessibility Improvements */
-.apple-logo,
-.iphone-image,
-.details-button {
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-.details-button:focus {
-    outline: 2px solid #80858a;
-}
-
-[class$="-photo"] {
-    width: 100%;
-    max-width: 500px;
-    /* Adjust to match your layout */
-    height: auto;
-    margin: 0 auto;
-    border-radius: 4px;
-    opacity: 0.9;
-}
-
-/* Adjust the styles for photo containers */
-.iphone15pro-container,
-.iphone15-container,
-.iphone15promax-container {
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc00;
-    /* Example border */
-    border-radius: 8px;
-    background-color: #12121200;
-    /* Light background for each phone container */
-}
-
-/* Overlay text for each phone photo */
-.iphone15pro-overlay-text,
-.iphone15-overlay-text,
-.iphone15promax-overlay-text {
-    position: absolute;
-    top: 10%;
-    /* Adjust as needed */
+.video-modal {
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    color: rgba(93, 91, 91, 0);
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 15px;
-    border-radius: 5px;
-    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    [class$="-photo"] {
-        max-width: 300px;
-    }
-
-    .iphone15pro-overlay-text,
-    .iphone15-overlay-text,
-    .iphone15promax-overlay-text {
-        font-size: 16px;
-    }
+.video-modal video {
+    max-width: 80vw;
+    max-height: 80vh;
 }
 
-/* Accessibility improvements for additional photos */
-[class$="-photo"] {
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-/* Adjust focus styles for consistency */
-[class$="-container"]:focus {
-    outline: 2px solid #80858a;
+.video-modal button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
 }

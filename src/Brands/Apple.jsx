@@ -4,12 +4,14 @@ import applelogo from '../images/applelogo.png';
 import iphoneImage from '../images/Iphone15pro.png';
 import iphoneProMaxImage from '../images/Iphone15promax.png';
 import iphone15 from '../images/Iphone15.png';
+import video1 from '../videos/large_2x (2).mp4';
 
 const Apple = () => {
     const [opacity, setOpacity] = useState(1);
     const [showProDetails, setShowProDetails] = useState(false);
     const [showProMaxDetails, setShowProMaxDetails] = useState(false);
     const [showIphone15Details, setShowIphone15Details] = useState(false);
+    const [showVideo, setShowVideo] = useState(false);
 
     const handleScroll = () => {
         const newOpacity = Math.max(0.5, 1 - window.scrollY / 500);
@@ -18,13 +20,10 @@ const Apple = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const handlePayment = (phoneId) => {
-
         alert(`Payment process for ${phoneId} would start here.`);
     };
 
@@ -34,6 +33,10 @@ const Apple = () => {
         ));
     };
 
+    const toggleVideoModal = () => {
+        setShowVideo(!showVideo);
+    };
+
     const phones = [
         {
             id: 'iphone15pro',
@@ -41,7 +44,8 @@ const Apple = () => {
             title: 'iPhone 15 Pro',
             description: "Black Titanium, White Titanium, Blue Titanium, Natural Titanium\nTitanium design Ceramic Shield front Textured matte glass back.\n\n Capacity:\n128GB\n256GB\n 512GB\n1TB \nSize and Weight:\n Weight: 6.60 ounces (187 grams)\nHeight:5.77 inches(146.6 mm)\nWidth:2.78 inches (70.6 mm)\nDepth:0.32 inch(8.25 mm)",
             showDetails: showProDetails,
-            setShowDetails: setShowProDetails
+            setShowDetails: setShowProDetails,
+            onImageClick: toggleVideoModal
         },
         {
             id: 'iphone15',
@@ -59,7 +63,6 @@ const Apple = () => {
             showDetails: showProMaxDetails,
             setShowDetails: setShowProMaxDetails
         }
-
     ];
 
     return (
@@ -70,24 +73,30 @@ const Apple = () => {
             <div className="products-container">
                 {phones.map(phone => (
                     <div key={phone.id} className={`${phone.id}-container`}>
-                        <img src={phone.image} alt={phone.title} className={`${phone.id}-image`} />
+                        <img
+                            src={phone.image}
+                            alt={phone.title}
+                            className={`${phone.id}-image`}
+                            onClick={phone.id === 'iphone15pro' ? toggleVideoModal : undefined}
+                        />
                         <h2>{phone.title}</h2>
                         <button onClick={() => phone.setShowDetails(!phone.showDetails)} className="details-button">
                             {phone.showDetails ? 'Less Details' : 'More Details'}
                         </button>
                         {phone.showDetails && (
-                            <div>
-                                <div className={`${phone.id}-description`}>
-                                    {renderDescription(phone.description)}
-                                </div>
-                                <button onClick={() => handlePayment(phone.id)} className="payment-button">
-                                    Buy {phone.title}
-                                </button>
+                            <div className={`${phone.id}-description`}>
+                                {renderDescription(phone.description)}
                             </div>
                         )}
                     </div>
                 ))}
             </div>
+            {showVideo && (
+                <div className="video-modal">
+                    <video src={video1} controls autoPlay />
+                    <button onClick={toggleVideoModal}>Close</button>
+                </div>
+            )}
         </div>
     );
 };
