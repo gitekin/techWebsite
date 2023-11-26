@@ -44,7 +44,7 @@
 /* Styles for Samsung */
 .mySamsung-image {
     display: block;
-    width: 165%;
+    width: 375%;
     height: auto;
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
@@ -88,12 +88,12 @@
 /* Styles for Huawei */
 .Huaweip60pro-image {
     display: block;
-    width: 149%;
+    width: 348%;
     height: auto;
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     margin: 0;
-    transform: translate(259px, 1px);
+    transform: translate(535px, 1px);
 }
 
 .Huaweip60pro-text-container {
@@ -106,7 +106,7 @@
 .Huaweip60pro-overlay-text {
     position: absolute;
     top: 3%;
-    left: 80%;
+    left: 100%;
     transform: translate(370px, 25px);
     color: rgba(255, 255, 255, 0.767);
     font-size: 30px;
@@ -121,7 +121,7 @@
 .Huaweip60pro-product-link {
     position: absolute;
     top: 15%;
-    left: 80%;
+    left: 105%;
     transform: translate(400px, 60px);
     color: #0e75e2;
     text-decoration: none;
@@ -155,7 +155,7 @@
     height: auto;
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
-    transform: translate(-155%, 500px);
+    transform: translate(-68%, 500px);
     margin: 0;
 }
 
@@ -188,6 +188,49 @@
 }
 
 .Googelpixel8pro-product-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.VivoX100Pro-image {
+    display: block;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
+    transform: translate(-15%, 500px);
+    margin: 0;
+}
+
+.VivoX100Pro-overlay-text {
+    position: absolute;
+    top: 160%;
+    left: 65%;
+    transform: translate(-145%, -100%);
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.VivoX100Pro-product-link {
+    position: absolute;
+    top: 170%;
+    left: 70%;
+    transform: translate(-370%, -270%);
+    color: #0e75e2;
+    text-decoration: none;
+}
+
+.VivoX100Pro-product-link:hover {
+    text-decoration: underline;
+}
+
+.VivoX100Pro-product-container {
     position: relative;
     margin-bottom: 30px;
 }

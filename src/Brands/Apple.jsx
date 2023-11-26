@@ -23,8 +23,9 @@ const Apple = () => {
         };
     }, []);
 
-    const handlePayment = () => {
-        alert("Payment process would start here.");
+    const handlePayment = (phoneId) => {
+
+        alert(`Payment process for ${phoneId} would start here.`);
     };
 
     const renderDescription = (description) => {
@@ -41,7 +42,6 @@ const Apple = () => {
             description: "Black Titanium, White Titanium, Blue Titanium, Natural Titanium\nTitanium design Ceramic Shield front Textured matte glass back.\n\n Capacity:\n128GB\n256GB\n 512GB\n1TB \nSize and Weight:\n Weight: 6.60 ounces (187 grams)\nHeight:5.77 inches(146.6 mm)\nWidth:2.78 inches (70.6 mm)\nDepth:0.32 inch(8.25 mm)",
             showDetails: showProDetails,
             setShowDetails: setShowProDetails
-
         },
         {
             id: 'iphone15',
@@ -59,6 +59,7 @@ const Apple = () => {
             showDetails: showProMaxDetails,
             setShowDetails: setShowProMaxDetails
         }
+
     ];
 
     return (
@@ -75,14 +76,18 @@ const Apple = () => {
                             {phone.showDetails ? 'Less Details' : 'More Details'}
                         </button>
                         {phone.showDetails && (
-                            <div className={`${phone.id}-description`}>
-                                {renderDescription(phone.description)}
+                            <div>
+                                <div className={`${phone.id}-description`}>
+                                    {renderDescription(phone.description)}
+                                </div>
+                                <button onClick={() => handlePayment(phone.id)} className="payment-button">
+                                    Buy {phone.title}
+                                </button>
                             </div>
                         )}
                     </div>
                 ))}
             </div>
-
         </div>
     );
 };

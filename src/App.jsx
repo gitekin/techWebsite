@@ -4,9 +4,7 @@ import NavBar from './Components/NavBarComponent/NavBar.jsx';
 import Home from './Pages/Home';
 import Brand from './Pages/Brand';
 import Apple from './Brands/Apple';
-
-
-
+import Samsung from './Brands/Samsung';
 
 function App() {
     return (
@@ -17,16 +15,12 @@ function App() {
                     <Route path="/home" element={<Home />} />
                     <Route path="/brands" element={<Brand />} />
                     <Route path="/brands/apple" element={<Apple />} />
-
-
+                    <Route path="/brands/samsung" element={<Samsung />} />
                     <Route path="*" element={<Navigate to="/home" />} />
                 </Routes>
-
-
             </div>
         </Router>
     );
 }
-
 
 export default App;

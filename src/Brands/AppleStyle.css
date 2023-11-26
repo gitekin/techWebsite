@@ -1,6 +1,6 @@
 .apple-page {
     text-align: center;
-    min-height: 100vh;
+    min-height: 1000vh;
     background-color: #00000000;
 }
 
@@ -112,5 +112,69 @@
 }
 
 .details-button:focus {
+    outline: 2px solid #80858a;
+}
+
+[class$="-photo"] {
+    width: 100%;
+    max-width: 500px;
+    /* Adjust to match your layout */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+/* Adjust the styles for photo containers */
+.iphone15pro-container,
+.iphone15-container,
+.iphone15promax-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc00;
+    /* Example border */
+    border-radius: 8px;
+    background-color: #12121200;
+    /* Light background for each phone container */
+}
+
+/* Overlay text for each phone photo */
+.iphone15pro-overlay-text,
+.iphone15-overlay-text,
+.iphone15promax-overlay-text {
+    position: absolute;
+    top: 10%;
+    /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(93, 91, 91, 0);
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    [class$="-photo"] {
+        max-width: 300px;
+    }
+
+    .iphone15pro-overlay-text,
+    .iphone15-overlay-text,
+    .iphone15promax-overlay-text {
+        font-size: 16px;
+    }
+}
+
+/* Accessibility improvements for additional photos */
+[class$="-photo"] {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Adjust focus styles for consistency */
+[class$="-container"]:focus {
     outline: 2px solid #80858a;
 }
