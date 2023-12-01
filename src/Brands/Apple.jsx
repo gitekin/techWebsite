@@ -5,6 +5,8 @@ import iphoneImage from '../images/Iphone15pro.png';
 import iphoneProMaxImage from '../images/Iphone15promax.png';
 import iphone15 from '../images/Iphone15.png';
 import video1 from '../videos/large_2x (2).mp4';
+import iphone14Image from '../images/Iphone14.png';
+
 
 const Apple = () => {
     const [opacity, setOpacity] = useState(1);
@@ -62,7 +64,16 @@ const Apple = () => {
             description: "Black Titanium, White Titanium, Blue Titanium, Natural Titanium\nTitanium design Ceramic Shield front Textured matte glass back.\n\n Capacity:\n256GB\n 512GB\n1TB \nSize and Weight:\n Weight: 7.81 ounces (221 grams)\nHeight:6.29 inches(159.9 mm)\nWidth:3.02 inches (76.7 mm)\nDepth:0.32 inch(8.25 mm)",
             showDetails: showProMaxDetails,
             setShowDetails: setShowProMaxDetails
-        }
+        },
+
+        {
+            id: 'iphone14and14pluse ',
+            image: iphone14Image,
+            title: 'iphone14 & 14 pluse',
+            description: "Midnight, Starlight,(PRODUCT)RED, Blue, Purple, Yellow \nCeramic Shield front Glass back and aluminum design \n",
+            showDetails: showProMaxDetails,
+            setShowDetails: setShowProMaxDetails
+        },
     ];
 
     return (

@@ -1,7 +1,9 @@
 .apple-page {
     text-align: center;
-    min-height: 1000vh;
-    background-color: #00000000;
+    min-height: 100vh;
+    /* Changed from 1000vh to 100vh for full viewport height */
+    background-color: #f5f5f5;
+    /* Added light gray background */
 }
 
 .logo-container {
@@ -10,6 +12,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: opacity 0.8s ease;
+    z-index: 10;
+    /* Ensure the logo is above other content */
 }
 
 .apple-logo {
@@ -29,18 +33,12 @@
     opacity: 0.9;
 }
 
-.iphone15pro-image {
-    max-width: 400px;
-    margin-top: 80px;
-}
-
-.iphone15promax-image {
-    max-width: 600px;
-    margin-top: 80px;
-}
-
+/* Combined styles for images to reduce redundancy */
+.iphone15pro-image,
+.iphone15promax-image,
 .iphone15-image {
     max-width: 400px;
+    /* Adjusted to be the same for all */
     margin-top: 80px;
 }
 
@@ -74,7 +72,10 @@
         width: 200px;
     }
 
-    .iphone-image {
+    .iphone-image,
+    .iphone15pro-image,
+    .iphone15promax-image,
+    .iphone15-image {
         max-width: 300px;
     }
 
@@ -90,7 +91,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.5);
+    /* Ensure modal is above all other content */
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark background for better visibility */
     width: 100%;
     height: 100%;
     display: flex;
@@ -99,8 +102,11 @@
 }
 
 .video-modal video {
-    max-width: 80vw;
+    width: 90%;
+    /* Responsive width */
     max-height: 80vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: add shadow for depth */
 }
 
 .video-modal button {
@@ -109,7 +115,8 @@
     right: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background: red;
+    background-color: #ff4545;
+    /* Bright red for visibility */
     color: white;
     border: none;
     cursor: pointer;

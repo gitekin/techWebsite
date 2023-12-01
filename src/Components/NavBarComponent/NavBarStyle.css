@@ -52,9 +52,3 @@
 .NavBar a:hover {
     background-color: rgba(208, 163, 163, 0.1);
 }
-
-/* Adjust the main content padding */
-body {
-    padding-top: 10px;
-    /* Adjust based on the height of your navbar */
-}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import api from './api/axiosConfig'
 import NavBar from './Components/NavBarComponent/NavBar.jsx';
 import Home from './Pages/Home';
 import Brand from './Pages/Brand';

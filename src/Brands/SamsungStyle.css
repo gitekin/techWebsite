@@ -18,3 +18,8 @@
     /* Adjust the size as needed */
     height: auto;
 }
+
+body {
+    background-color: #1a181819;
+    /* Light gray background */
+}
