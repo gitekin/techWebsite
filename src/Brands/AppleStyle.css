@@ -1,9 +1,11 @@
 .apple-page {
     text-align: center;
     min-height: 100vh;
-    /* Changed from 1000vh to 100vh for full viewport height */
-    background-color: #f5f5f5;
-    /* Added light gray background */
+    background-color: #403f3f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-container {
@@ -13,7 +15,7 @@
     transform: translate(-50%, -50%);
     transition: opacity 0.8s ease;
     z-index: 10;
-    /* Ensure the logo is above other content */
+
 }
 
 .apple-logo {
@@ -22,15 +24,37 @@
 }
 
 .iphone-container {
-    padding: 40px 0;
+    margin: 20px;
+    flex-basis: calc(40% - 20px);
+}
+
+.iphone-container h2 {
+    color: white;
 }
 
 .iphone-image {
-    width: 100%;
-    max-width: 500px;
+    width: auto;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     opacity: 0.9;
+
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    /* This will space out the phones evenly */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.iphone-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 /* Combined styles for images to reduce redundancy */
@@ -40,6 +64,7 @@
     max-width: 400px;
     /* Adjusted to be the same for all */
     margin-top: 80px;
+
 }
 
 .details-button {
@@ -65,6 +90,7 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 14px;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -120,4 +146,48 @@
     color: white;
     border: none;
     cursor: pointer;
+}
+
+iphone14and14plus-image {
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+    }
+
+    .iphone-container {
+        flex-basis: auto;
+
+    }
+
+    .iphone14and14plus-image,
+    .iphone15pro-image {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .iphone-image {
+        max-width: 100%;
+    }
+}
+
+.pay-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #747574;
+    /* Example: A green color */
+    color: white;
+    border: none;
+    border-radius: 1px;
+    transition: background-color 0.6s ease;
+}
+
+.pay-button:hover {
+    background-color: #8a8b8a;
+    /* Darker green */
 }

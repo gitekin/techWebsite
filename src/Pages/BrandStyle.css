@@ -1,3 +1,7 @@
+body {
+    background-color: #333;
+}
+
 .brand-container {
     padding: 100px 400px;
     text-align: center;
@@ -8,7 +12,8 @@
 
 .brand-container:hover {
     transform: translateY(-20px);
-    box-shadow: 0 12px 40px rgba(199, 191, 191, 0.666);
+    box-shadow: 0 12px 40px rgba(183, 179, 179, 0.666);
+    background-color: #333;
 }
 
 .brand-container h1,
