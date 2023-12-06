@@ -11,9 +11,8 @@ function ContactUs() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Implement your form submission logic here
         console.log(formData);
-        // You might want to send the form data to a server or email service
+
     };
 
     return (

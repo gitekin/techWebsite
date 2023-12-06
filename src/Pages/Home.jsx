@@ -6,11 +6,11 @@ import Huaweip60pro from '../images/Huaweip60pro.jpg';
 import Googelpixel8pro from '../images/Googelpixel8pro.jpg';
 import VivoX100Pro from '../images/VivoX100Pro.png';
 
-
-
 function Home() {
     return (
         <>
+            <div className="home-page" style={{ paddingTop: '350px' }}>
+            </div>
             <div className="product-container myPhoto-container">
                 <img src={myPhoto} alt="Iphone15 pro max" className="myPhoto-image" />
                 <div className="myPhoto-overlay-text">iPhone 15 Pro</div>
