@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 1500px;
+    padding-top: 1290px;
 }
 
 .logo-container {
@@ -27,6 +27,8 @@
 .iphone-container {
     margin: 20px;
     flex-basis: calc(50% - 200px);
+    min-height: 800px;
+    overflow: visible;
 }
 
 .iphone-container h2 {
@@ -45,8 +47,7 @@
 .products-container {
     display: flex;
     justify-content: space-around;
-    /* This will space out the phones evenly */
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -58,15 +59,21 @@
     gap: 10px;
 }
 
-/* Combined styles for images to reduce redundancy */
+.navbar {
+    z-index: 1;
+    margin-bottom: 10PX;
+
+}
+
+
 .iphone15pro-image,
 .iphone15promax-image,
 .iphone15-image,
 .iphone14-image,
 .iphone15promax {
     max-width: 400px;
-    /* Adjusted to be the same for all */
-    margin-top: -100px;
+
+    margin-top: 120px;
 
 }
 
@@ -110,9 +117,17 @@
     }
 
     .iphone-description {
-        width: 95%;
-        font-size: 12px;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, visibility 0.5s ease;
     }
+}
+
+.iphone-container.show-details .iphone-description {
+    visibility: visible;
+    max-height: 500px;
+
 }
 
 .video-modal {
@@ -121,9 +136,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    /* Ensure modal is above all other content */
+
     background: rgba(0, 0, 0, 0.8);
-    /* Dark background for better visibility */
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -133,10 +148,8 @@
 
 .video-modal video {
     width: 90%;
-    /* Responsive width */
     max-height: 80vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Optional: add shadow for depth */
 }
 
 .video-modal button {
@@ -152,28 +165,7 @@
     cursor: pointer;
 }
 
-/*
-@media (max-width: 768px) {
-    .products-container {
-        flex-direction: column;
-    }
 
-    .iphone-container {
-        flex-basis: auto;
-
-    }
-
-
-    .iphone15pro-image {
-        max-width: 450px;
-    }
-}
-
-@media (max-width: 768px) {
-    .iphone-image {
-        max-width: 100%;
-    }
-}*/
 
 .pay-button {
     margin-top: 10px;
@@ -195,21 +187,20 @@
 
 .iphone14plus-container {
     align-self: flex-start;
-    /* Aligns this item to the start of the cross axis */
+
     max-width: 450px;
-    /* Adjust as needed for size */
-    margin-left: 970px;
-    /* Give it some space from the left edge */
-    margin-top: -400px;
-    /* Adjust as needed for spacing from top */
+    margin-right: 970px;
+
+    margin-top: -800px;
+
 }
 
-/* Ensuring the image within the iPhone 14 Plus container is sized correctly */
+
 .iphone14plus-container .iphone-image {
     max-width: 80%;
-    /* Make it as wide as its container */
+
     height: auto;
-    /* Maintain aspect ratio */
+
 }
 
 .iphone14-container .iphone-image {
@@ -222,7 +213,7 @@
 .iphone14-container {
     align-self: flex-start;
 
-    margin-top: -650px;
+    margin-top: -1150px;
     margin-left: 700px;
 
 }
@@ -235,7 +226,7 @@
 }
 
 .iphone15promax-container {
-    margin-top: -100px;
+    margin-top: -500px;
     margin-right: 870px;
 
 

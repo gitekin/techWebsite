@@ -4,10 +4,6 @@ import './MyprofileStyle.css';
 const AuthPage = () => {
     const [isLoginView, setIsLoginView] = useState(true);
 
-    const toggleView = () => {
-        setIsLoginView(!isLoginView);
-    };
-
     return (
         <div className="auth-container">
             <div className="toggle-buttons">
@@ -24,10 +20,24 @@ const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        // Add login logic here
-        console.log("Login with:", { email, password });
+        try {
+            const response = await fetch('http://localhost:8080/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                // Handle login success (e.g., redirecting the user, storing auth token)
+            } else {
+                // Handle errors (e.g., displaying a message to the user)
+                console.error(data.message);
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+        }
     };
 
     return (
@@ -47,14 +57,28 @@ const RegisterForm = () => {
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
         if (password !== repeatPassword) {
             alert("Passwords do not match!");
             return;
         }
-        // Add registration logic here
-        console.log("Register with:", { firstName, lastName, dob, email, password });
+        try {
+            const response = await fetch('http://localhost:8080/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ firstName, lastName, dob, email, password })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                // Handle registration success (e.g., redirecting to login page, showing success message)
+            } else {
+                // Handle errors (e.g., displaying a message to the user)
+                console.error(data.message);
+            }
+        } catch (error) {
+            console.error('Registration error:', error);
+        }
     };
 
     return (
