@@ -82,7 +82,7 @@ const RegisterForm = () => {
         setIsSuccess(false);
 
         if (password !== repeatPassword) {
-            setMessage("Passwords do not match!");
+            setMessage("Passwords do not match! ");
             setIsSuccess(false);
             return;
         }
