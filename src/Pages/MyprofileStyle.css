@@ -1,0 +1,94 @@
+.auth-container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(to right, #333, #444);
+    /* Adding a subtle gradient */
+    border-radius: 10px;
+    /* Slightly more rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    /* Deeper shadow for a 3D effect */
+    text-align: center;
+    color: #ffffff;
+    /* White text color for better readability */
+}
+
+.toggle-buttons button {
+    padding: 12px 24px;
+    /* Larger buttons */
+    margin: 10px 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.2s;
+    /* Adding transform to transition */
+    border-radius: 10px;
+    /* Rounded buttons */
+}
+
+.toggle-buttons button:disabled {
+    background-color: #0056b3;
+    opacity: 0.9;
+    /* Less transparent for disabled state */
+}
+
+.toggle-buttons button:hover {
+    transform: translateY(-2px);
+    /* Slight raise effect on hover */
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.auth-form input {
+    padding: 10px;
+    /* More padding for input */
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    /* Darker border */
+    background-color: #6e6d6d7c;
+    /* Dark input fields */
+    color: white;
+    transition: border-color 0.8s;
+    /* Smooth transition for border */
+}
+
+.auth-form button {
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    /* Adding transform to transition */
+}
+
+.auth-form button:hover {
+    background-color: #217a34;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    /* Slight raise effect on hover */
+}
+
+.auth-form input::placeholder {
+    color: #bbb;
+}
+
+.auth-form input:hover,
+.auth-form input:focus {
+    border-color: #007bff;
+    /* Highlight border on hover/focus */
+}
+
+/* Styling for error or message display (optional) */
+.auth-message {
+    color: #ff6868;
+    margin: 10px 0;
+}
